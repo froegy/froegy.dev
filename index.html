@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<head>
+    <title>froegy.dev</title>
+</head>
+<body>
+    <header>
+        <h1 id="Title">Welcome to froegy.dev</h1>
+        <h2 id="Text">This is some text</h2>
+        <button id="cbutton" onclick=changeText("Text")>Click Here<button>
+    </header>
+</body>
+<script>
+function changeText(id) {
+    let element = document.getElementById(id)
+    element.innerText = "Chicken Butt"
+}
+</script>
