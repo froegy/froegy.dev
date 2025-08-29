@@ -6,12 +6,30 @@
     <header>
         <h1 id="Title">Welcome to froegy.dev</h1>
         <h2 id="Text">This is some text</h2>
-        <button id="cbutton" onclick="changeText('Text')">Click Here</button>
+        <img src="">
+        <button id="cbutton" onclick="changeText('Text', 'Chicken Butt')">Click Here</button>
     </header>
 </body>
 <script>
-function changeText(id) {
-    let element = document.getElementById(id)
-    element.innerText = "Chicken Butt"
+let chicken = false;
+function flipflop(textid, imageid) {
+    if (chicken) {
+        changeText(textid, "This is some text");
+        changeImage(imageid, "smily.jpg");
+        chicken = false;
+    }
+    else {
+        changeText(textid, "Chicken Butt");
+        changeImage(imageid, "chicken.jpg");
+        chicken = true;
+    };
+}
+function changeText(id, text) {
+    let element = document.getElementById(id);
+    element.innerText = text;
+}
+function changeImage(id, image) {
+    let element = document.getElementById(id);
+    element.src = "images/"+image;
 }
 </script>
