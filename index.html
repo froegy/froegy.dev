@@ -8,8 +8,8 @@
     </header>
     <main>
         <h2 id="Text">This is some text</h2>
-        <img src="images/smily.jpg">
-        <button id="cbutton" onclick="changeText('Text', 'Chicken Butt')">Click Here</button>
+        <img id="Image" src="images/smily.jpg">
+        <button id="cbutton" onclick="flipflop('Text', 'Image')">Click Here</button>
     </main>
 </body>
 <script>
@@ -33,6 +33,6 @@ function changeText(id, text) {
 }
 function changeImage(id, image) {
     let element = document.getElementById(id);
-    element.src = "images/"+image;
+    element.src = "images/"+image
 }
 </script>
