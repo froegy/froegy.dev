@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<head>
+    <title>froegy.dev</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <header>
+        <h1 id="title">Welcome to froegy.dev</h1>
+    </header>
+    <main>
+        <img id="cookie" src="images/cookie.png" onclick="clickCookie()">
+        <h1 id="cookieamount">Cookies: </h1>
+    </main>
+</body>
+<script>
+let cookies = 0
+let cookiesPerClick = 0
+let cookiesPerSecond = 0
+const cookieamount = document.getElementById("cookieamount")
+function clickCookie() {
+    cookies += cookiesPerClick
+    cookieamount.innerText = `Cookies: ${cookies}`
+}
+</script>
