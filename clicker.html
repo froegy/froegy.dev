@@ -32,7 +32,7 @@ function clickCookie() {
     updateCookieCounter();
 };
 
-function cookieLoop() {
+function cookieLoop(cookiesPerSecond) {
     cookies += cookiesPerSecond;
     updateCookieCounter();
 };
@@ -41,7 +41,7 @@ function updateCookieCounter() {
     cookiesdisplay.innerText = `Cookies: ${cookies}`;
 };
 // Cookies Per Second Function
-let cpsLoop = setInterval(cookieLoop, 1000);
+let cpsLoop = setInterval(cookieLoop, 1000, cookiesPerSecond);
 // Add clickCookie function to onclick for the cookie
 cookie.addEventListener("click", clickCookie);
 </script>

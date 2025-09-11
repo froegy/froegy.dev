@@ -21,13 +21,13 @@ grid-column-gap: 0px;
 grid-row-gap: 0px;
 }
 
-.cookiearea {
+#cookiearea {
     grid-area: 1 / 1 / 4 / 2;
     height: 100%;
 }
-.upgrades {
+#upgrades {
     grid-area: 1 / 2 / 2 / 3;
 }
-.buildings {
+#buildings {
     grid-area: 2 / 2 / 4 / 3;
 }
