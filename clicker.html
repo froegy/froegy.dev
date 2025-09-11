@@ -21,27 +21,27 @@
     </main>
 </body>
 <script>
-const cookiesdisplay = document.getElementById("cookieamount")
-const cookie = document.getElementById("cookie")
-let cookies = 0
-let cookiesPerClick = 1
-let cookiesPerSecond = 0
+const cookiesdisplay = document.getElementById("cookieamount");
+const cookie = document.getElementById("cookie");
+let cookies = 0;
+let cookiesPerClick = 1;
+let cookiesPerSecond = 0;
 
 function clickCookie() {
-    cookies += cookiesPerClick
-}
+    cookies += cookiesPerClick;
+    updateCookieCounter();
+};
 
 function cookieLoop() {
-    cookies += cookiesPerSecond
-}
+    cookies += cookiesPerSecond;
+    updateCookieCounter();
+};
 
 function updateCookieCounter() {
-    cookiesdisplay.innerText = `Cookies: ${cookies}`
-}
+    cookiesdisplay.innerText = `Cookies: ${cookies}`;
+};
 // Cookies Per Second Function
-setTimeout(cookieLoop, 1000)
-// Update the cookie text to match the amount of cookies
-setTimeout(updateCookieCounter, 500)
+let cpsLoop = setTimeout(cookieLoop, 1000);
 // Add clickCookie function to onclick for the cookie
-cookie.addEventListener("click", clickCookie)
+cookie.addEventListener("click", clickCookie);
 </script>
