@@ -13,3 +13,20 @@ button {
     display: block;
     font-size: 2em;
 }
+main {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+grid-template-rows: repeat(3, 1fr);
+grid-column-gap: 0px;
+grid-row-gap: 0px;
+}
+
+.cookie {
+    grid-area: 1 / 1 / 4 / 2;
+}
+.upgrades {
+    grid-area: 1 / 2 / 2 / 3;
+}
+.buildings {
+    grid-area: 2 / 2 / 4 / 3;
+}
