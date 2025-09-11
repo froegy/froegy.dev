@@ -21,7 +21,7 @@ grid-column-gap: 0px;
 grid-row-gap: 0px;
 }
 
-.cookie {
+.cookiearea {
     grid-area: 1 / 1 / 4 / 2;
 }
 .upgrades {
