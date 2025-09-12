@@ -12,11 +12,13 @@
             <img id="cookie" src="images/cookie.png">
             <h1 id="cookieamount">Cookies: 0</h1>
         </div>
-        <div id="upgrades">
-            <h1>Upgrades</h1>
-        </div>
-        <div id="buildings">
-            <h1>Buildings</h1>
+        <div id="shop">
+            <div id="upgrades">
+                <h1>Upgrades</h1>
+            </div>
+            <div id="buildings">
+                <h1>Buildings</h1>
+            </div>
         </div>
     </main>
 </body>
@@ -37,11 +39,18 @@ function cookieLoop(cookiesPerSecond) {
     updateCookieCounter();
 };
 
+function updateCookieLoop(intervalID=null) {
+    if (intervalID != null) {
+        clearInterval(intervalID)
+    }
+    cpsID = setInterval(cookieLoop, 1000, cookiesPerSecond)
+    return cpsloop
+}
 function updateCookieCounter() {
     cookiesdisplay.innerText = `Cookies: ${cookies}`;
 };
 // Cookies Per Second Function
-let cpsLoop = setInterval(cookieLoop, 1000, cookiesPerSecond);
+let cpsID = updateCookieCounter(null)
 // Add clickCookie function to onclick for the cookie
 cookie.addEventListener("click", clickCookie);
 </script>
